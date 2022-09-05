@@ -1,0 +1,22 @@
+[
+    {
+      "name": "nodejsContainer",
+      "image": "nginx", //add the public URL of ECR container
+      "cpu": 100,
+      "memory": 256,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 0
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": { 
+          "awslogs-group" : "/ecs/frontend-container",
+          "awslogs-region": "us-east-1"
+        }
+      }
+    }
+]

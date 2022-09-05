@@ -1,7 +1,7 @@
 [
     {
       "name": "nodejsContainer",
-      "image": "nginx", //add the public URL of ECR container
+      "image": "nginx", 
       "cpu": 100,
       "memory": 256,
       "essential": true,
